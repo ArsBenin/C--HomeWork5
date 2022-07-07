@@ -36,9 +36,28 @@ for (int i = 0; i < arr.Length; i++)
 return ammount;
 }
 
+int GetNumber()
+{
+    int result = 0;
+    Console.WriteLine("Введите число:");
+    while(true)
+    {
+        if(int.TryParse(Console.ReadLine(), out result))
+        {
+            break;
+        }
+            else
+        {
+            Console.Clear();
+            Console.WriteLine("Вы ввели не натурально число. Введите корректное число");
+        }
+    }
 
-Console.WriteLine("Введите размерность массива");
-int dimension = int.Parse(Console.ReadLine());
+    return result;
+}
+
+
+int dimension = GetNumber();
 int [] array = GetArray(dimension);
 PrintArray(array);
 int Even = EvenNumber(array);
