@@ -39,7 +39,7 @@ return ammount;
 int GetNumber()
 {
     int result = 0;
-    Console.WriteLine("Введите число:");
+    Console.WriteLine("Введите число элементов массива:");
     while(true)
     {
         if(int.TryParse(Console.ReadLine(), out result))
@@ -49,7 +49,7 @@ int GetNumber()
             else
         {
             Console.Clear();
-            Console.WriteLine("Вы ввели не натурально число. Введите корректное число");
+            Console.WriteLine("Вы ввели не натурально число. Введите корректное число элементов массива");
         }
     }
 
